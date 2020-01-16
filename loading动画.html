@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>loading</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css">
+  <style>
+    body {
+      color: #222;
+    }
+
+    h1 {
+      font-size: 14px;
+      font-family: "Microsoft Yahei";
+      text-align: center;
+    }
+
+    .loading-icon {
+      width: 50px;
+      height: 50px;
+      background-color: green;
+      border-radius: 100%;
+      margin: 100px auto;
+      /* 
+      linear 	动画从头到尾的速度是相同的。
+      ease 	默认。动画以低速开始，然后加快，在结束前变慢。
+      ease-in 	动画以低速开始。
+      ease-out 	动画以低速结束。
+      ease-in-out 	动画以低速开始和结束。
+      cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。
+      */
+      -webkit-animation: fadeOut 1.0s infinite ease-in-out;
+      animation: fadeOut 1.0s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes fadeOut {
+      from {
+        -webkit-transform: scale(0);
+      }
+
+      to {
+        -webkit-transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeOut {
+      form {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-icon"></div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
