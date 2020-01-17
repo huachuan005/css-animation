@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>transform</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css">
+  <style type="text/css">
+    .demo,
+    .img,
+    .border,
+    .mask {
+      width: 300px;
+      height: 300px;
+    }
+
+    .demo {
+      display: block;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 50%;
+    }
+
+    .border {
+      position: absolute;
+      border: 10px solid #072256;
+      border-left-color: #E07514;
+      border-top-color: #E07514;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      -webkit-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      -webkit-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+      color: rgba(94, 68, 68, 0);
+    }
+
+    .demo:hover .mask {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .demo:hover .border {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+
+    }
+
+    .info {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="demo">
+    <div class="img" style="background-image:url('./gwl.jpg')">
+    </div>
+    <div class="mask">
+      <div class="info">
+        <h3>心花怒放</h3>
+        <p>月色夜色在树上...</p>
+      </div>
+    </div>
+    <div class="border"></div>
+  </a>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
